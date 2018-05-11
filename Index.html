@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Loader</title>
+    <link href="Main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="main">
+        <h1>Css Loader</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum aperiam laborum, error quibusdam repellat minima fuga culpa excepturi fugiat delectus quisquam mollitia. Quod rerum repellendus odit culpa. Accusantium molestias ratione exercitationem iusto architecto neque delectus sapiente aut, est possimus ut dolore ipsa, odit vel dolor aliquam placeat nemo id.</p>
+    </div>
+    
+    <script>
+       document.querySelector('.main p').style.display = 'none';
+       document.querySelector('.main').classList.add('loader-1');
+        
+        //mimic server req
+        setTimeout(() =>{
+           document.querySelector('.main').classList.remove('loader-1');
+           document.querySelector('.main p').style.display = ('block');
+        }, 4000);
+    </script>
+</body>
+</html>
